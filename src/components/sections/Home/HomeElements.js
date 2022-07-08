@@ -18,6 +18,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+@media screen and (max-width: 64em){
+width: 85%;
+}
+@media screen and (max-width: 48em){
+flex-direction: column-reverse;
+width: 100%;
+>*:first-child{
+    width: 100%;
+    margin-top: 2rem;
+}
+}
 `
 export const Box = styled.div`
 width: 50%;
@@ -47,6 +58,16 @@ img{
     height: auto;
     animation: ${rotate} 6s linear infinite reverse;
 }
+@media screen and (max-width: 64em){
+  width: 4rem;
+  height: 4rem;
+  left: none;
+  right: 2rem;
+  bottom: 100%;
+}
+@media screen and (max-width: 48em){
+right: 1rem;
+}
 `
 export const Circle = styled.span`
 width: 3rem;
@@ -64,5 +85,11 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
+
+@media screen and (max-width: 64em){
+width: 2rem;
+height: 2rem;
+font-size: ${props => props.theme.fontlg};
+}
 `;
 

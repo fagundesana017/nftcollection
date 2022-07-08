@@ -8,7 +8,7 @@ import round from '../../../assets/Rounded-Text-Black.png';
 
 export default function Home() {
  return (
-     <Section>
+     <Section id='home'>
       <Container>
         <Box>
          <TypeWriteText/>

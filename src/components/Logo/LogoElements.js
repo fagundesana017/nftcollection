@@ -9,5 +9,8 @@ transition: all 0.2s ease;
     transform: scale(1.102);
 
 }
+@media screen and (max-width: 64em){
+    font-size: ${props => props.theme.fontxxl};
+}
 `;
 

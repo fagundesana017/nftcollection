@@ -19,14 +19,39 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+@media screen and (max-width: 70em){
+  width: 85%;
+}
+
+@media screen and (max-width: 64em){
+  width: 100%;
+  flex-direction: column;
+
+  &>*:last-child{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 40em){
+ 
+
+  &>*:last-child{
+    width: 90%;
+  }
+}
 `;
 export const Box = styled.div`
 width: 50%;
 height: 100%;
 display: flex;
+min-height: 60vh;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+@media screen and (max-width: 40em){
+    min-height: 50vh;
+}
+
 `;
 
 export const Title = styled.h2`
@@ -36,6 +61,17 @@ width: 80%;
 color: ${(props)=> props.theme.body};
 align-self: flex-start;
 margin: 0 auto;
+
+@media screen and (max-width: 64em){
+width: 100%;
+text-align: center;
+}
+@media screen and (max-width: 40em){
+font-size: ${(props)=> props.theme.fontxl};
+}
+@media screen and (max-width: 30em){
+    font-size: ${(props)=> props.theme.fontlg};
+}
 `;
 
 export const SubTitle = styled.p`
@@ -46,6 +82,18 @@ color: ${(props)=> props.theme.body};
 align-self: flex-start;
 margin: 1rem auto;
 font-weight: 400;
+
+@media screen and (max-width: 64em){
+width: 100%;
+text-align: center;
+font-size: ${(props)=> props.theme.fontmd};
+}
+@media screen and (max-width: 40em){
+font-size: ${(props)=> props.theme.fontmd};
+}
+@media screen and (max-width: 30em){
+    font-size: ${(props)=> props.theme.fontsm};
+}
 `
 
 export const TextLight = styled.p`
@@ -56,10 +104,30 @@ color:${(props)=> `rgba(${props.theme.bodyRgba}, 0.6)`};
 align-self: flex-start;
 margin: 1rem auto;
 font-weight: 400;
+
+@media screen and (max-width: 64em){
+width: 100%;
+text-align: center;
+font-size: ${(props)=> props.theme.fontsm};
+}
+@media screen and (max-width: 40em){
+font-size: ${(props)=> props.theme.fontsm};
+}
+@media screen and (max-width: 30em){
+    font-size: ${(props)=> props.theme.fontxs};
+}
 `
 export const ButtonContainer = styled.div`
 width: 80%;
+display: flex;
 margin: 1rem auto;
 align-self: flex-start;
 
+@media screen and (max-width: 64em){
+    width: 100%;
+
+    button{
+        margin: 0 auto;
+    }
+}
 `;

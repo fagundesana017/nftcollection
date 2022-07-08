@@ -8,14 +8,14 @@ import { ThemeProvider } from 'styled-components';
 
 export default function About() {
  return (
-   <Section>
+   <Section id='about'>
     <Container>
       <Box>
         <Carousel/>
       </Box>
       <Box>
         <Title>
-          Welcome to The weirdos club
+          Welcome to The <br/> weirdos club
         </Title>
         <SubTitle>The WEIRDOS CLUB is a privatee collection of NFTs-unique digital collectibles. The Weirdos are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS</SubTitle>
         <TextLight>
